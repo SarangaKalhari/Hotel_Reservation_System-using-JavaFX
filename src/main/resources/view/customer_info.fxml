@@ -25,10 +25,10 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="txtCustID" layoutX="86.0" layoutY="56.0" prefHeight="26.0" prefWidth="150.0" promptText="Customer ID" />
-      <TextField fx:id="txtPhoneNumber" layoutX="86.0" layoutY="91.0" prefHeight="26.0" prefWidth="150.0" promptText="Phone Number" />
-      <TextField fx:id="txtCity" layoutX="247.0" layoutY="91.0" prefHeight="26.0" prefWidth="195.0" promptText="City" />
-      <TextField fx:id="txtName" layoutX="247.0" layoutY="56.0" prefHeight="26.0" prefWidth="195.0" promptText="Name" />
+      <TextField fx:id="txtCustID" layoutX="40.0" layoutY="55.0" promptText="Customer ID" />
+      <TextField fx:id="txtPhoneNumber" layoutX="123.0" layoutY="91.0" prefHeight="26.0" prefWidth="191.0" promptText="Phone Number" />
+      <TextField fx:id="txtCity" layoutX="353.0" layoutY="91.0" promptText="City" />
+      <TextField fx:id="txtName" layoutX="234.0" layoutY="55.0" prefHeight="26.0" prefWidth="211.0" promptText="Name" />
       <Button layoutX="82.0" layoutY="130.0" mnemonicParsing="false" onAction="#btnAddOnAction" style="-fx-background-color: #33214a;" text="ADD" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
@@ -54,6 +54,6 @@
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </Button>
-      <TextField fx:id="txtAge" layoutX="456.0" layoutY="56.0" prefHeight="26.0" prefWidth="95.0" promptText="Age" />
+      <TextField fx:id="txtAge" layoutX="470.0" layoutY="55.0" prefHeight="26.0" prefWidth="95.0" promptText="Age" />
    </children>
 </AnchorPane>
