@@ -1,14 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.Customer_Info"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Customer_Info">
+   <children>
+      <TableView fx:id="tblRoomInfo" layoutX="40.0" layoutY="169.0" prefHeight="200.0" prefWidth="538.0">
+         <columns>
+            <TableColumn fx:id="colCustID" prefWidth="87.20001220703125" text="ID" />
+            <TableColumn fx:id="colCustName" prefWidth="140.0" text="Name" />
+            <TableColumn fx:id="colCustAge" prefWidth="58.4000244140625" text="Age" />
+            <TableColumn fx:id="colCustPhoneNo" minWidth="0.0" prefWidth="143.20001220703125" text="Phone Number" />
+            <TableColumn fx:id="colCustCity" prefWidth="111.20001220703125" text="City" />
+         </columns>
+      </TableView>
+      <Label layoutX="221.0" layoutY="14.0" prefHeight="42.0" prefWidth="176.0" text="Customer Info">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCustID" layoutX="40.0" layoutY="55.0" promptText="Customer ID" />
+      <TextField fx:id="txtPhoneNumber" layoutX="123.0" layoutY="91.0" prefHeight="26.0" prefWidth="191.0" promptText="Phone Number" />
+      <TextField fx:id="txtCity" layoutX="353.0" layoutY="91.0" promptText="City" />
+      <TextField fx:id="txtName" layoutX="234.0" layoutY="55.0" prefHeight="26.0" prefWidth="211.0" promptText="Name" />
+      <Button layoutX="82.0" layoutY="130.0" mnemonicParsing="false" onAction="#btnAddOnAction" style="-fx-background-color: #33214a;" text="ADD" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="185.0" layoutY="129.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="26.0" prefWidth="72.0" style="-fx-background-color: #33214a;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="325.0" layoutY="127.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="26.0" prefWidth="72.0" style="-fx-background-color: #33214a;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="443.0" layoutY="127.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="26.0" prefWidth="53.0" style="-fx-background-color: #33214a;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="497.0" layoutY="384.0" mnemonicParsing="false" onAction="#btnReloadOnAction" text="Reload">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtAge" layoutX="470.0" layoutY="55.0" prefHeight="26.0" prefWidth="95.0" promptText="Age" />
+   </children>
 </AnchorPane>
