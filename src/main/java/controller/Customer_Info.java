@@ -61,6 +61,16 @@ public class Customer_Info implements Initializable {
     @FXML
     void btnAddOnAction(ActionEvent event) {
 
+        customerInfoDTOS.add(new CustomerInfoDTO(txtCustID.getText(), txtName.getText(), txtPhoneNumber.getText(), txtCity.getText(), Integer.parseInt(txtAge.getText())));
+        tblCustomeInfo.refresh();
+
+        txtCustID.setText("");
+        txtName.setText("");
+        txtPhoneNumber.setText("");
+        txtCity.setText("");
+        txtAge.setText("");
+
+
     }
 
     @FXML
@@ -92,5 +102,16 @@ public class Customer_Info implements Initializable {
         colCustCity.setCellValueFactory(new PropertyValueFactory<>("city"));
 
         tblCustomeInfo.setItems(customerInfoDTOS);
+
+        tblCustomeInfo.getSelectionModel().selectedItemProperty().addListener((observableValue, customerInfoDTO, t1) -> {
+            if(t1 != null){
+                txtCustID.setText(t1.getId());
+                txtName.setText(t1.getName());
+                txtAge.setText(String.valueOf(t1.getAge()));
+                txtPhoneNumber.setText(t1.getPhoneNo());
+                txtCity.setText(t1.getCity());
+
+            }
+        });
     }
 }
