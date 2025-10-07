@@ -92,22 +92,8 @@ public class EmployeeController implements Initializable {
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
         EmployeeDTO selectedItem = tblEmpInfo.getSelectionModel().getSelectedItem();
-
-        selectedItem.setEmpID(txtEmpID.getText());
-        selectedItem.setName(txtEmpName.getText());
-        selectedItem.setRole(txtRole.getText());
-        selectedItem.setPhoneNo(txtPhoneNumber.getText());
-        selectedItem.setEmail(txtEmail.getText());
-        selectedItem.setSalary(Double.parseDouble(txtSalary.getText()));
-
+        employeeDTOS.remove(selectedItem);
         tblEmpInfo.refresh();
-
-        txtEmpID.setText("");
-        txtEmpName.setText("");
-        txtRole.setText("");
-        txtEmail.setText("");
-        txtPhoneNumber.setText("");
-        txtSalary.setText("");
 
     }
 
@@ -124,7 +110,23 @@ public class EmployeeController implements Initializable {
 
     @FXML
     void btnUpdateOnAction(ActionEvent event) {
+        EmployeeDTO selectedItem = tblEmpInfo.getSelectionModel().getSelectedItem();
 
+        selectedItem.setEmpID(txtEmpID.getText());
+        selectedItem.setName(txtEmpName.getText());
+        selectedItem.setRole(txtRole.getText());
+        selectedItem.setPhoneNo(txtPhoneNumber.getText());
+        selectedItem.setEmail(txtEmail.getText());
+        selectedItem.setSalary(Double.parseDouble(txtSalary.getText()));
+
+        tblEmpInfo.refresh();
+
+        txtEmpID.setText("");
+        txtEmpName.setText("");
+        txtRole.setText("");
+        txtEmail.setText("");
+        txtPhoneNumber.setText("");
+        txtSalary.setText("");
     }
 
     @Override
