@@ -35,5 +35,13 @@ public class DashBoardController {
     }
 
     public void btnEmployeeOnAction(ActionEvent actionEvent) {
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/employee_info.fxml"))));
+            stage.setTitle("Employee Info");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        stage.show();
     }
 }
