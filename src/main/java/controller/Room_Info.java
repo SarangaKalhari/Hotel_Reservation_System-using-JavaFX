@@ -63,6 +63,10 @@ public class Room_Info implements Initializable {
 
     @FXML
     void btnClearOnAction(ActionEvent event) {
+        txtRoomId.clear();
+        txtType.clear();
+        txtDesc.clear();
+        txtPrice.clear();
 
     }
 
