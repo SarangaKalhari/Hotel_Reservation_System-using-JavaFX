@@ -76,6 +76,12 @@ public class Customer_Info implements Initializable {
     @FXML
     void btnClearOnAction(ActionEvent event) {
 
+        txtCustID.clear();
+        txtName.clear();
+        txtPhoneNumber.clear();
+        txtCity.clear();
+        txtAge.clear();
+
     }
 
     @FXML
