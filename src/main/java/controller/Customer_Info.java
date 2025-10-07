@@ -88,11 +88,31 @@ public class Customer_Info implements Initializable {
 
     @FXML
     void btnReloadOnAction(ActionEvent event) {
+        txtCustID.setText("");
+        txtName.setText("");
+        txtPhoneNumber.setText("");
+        txtCity.setText("");
+        txtAge.setText("");
 
     }
 
     @FXML
     void btnUpdateOnAction(ActionEvent event) {
+        CustomerInfoDTO selectedItem = tblCustomeInfo.getSelectionModel().getSelectedItem();
+
+        selectedItem.setId(txtCustID.getText());
+        selectedItem.setName(txtName.getText());
+        selectedItem.setPhoneNo(txtPhoneNumber.getText());
+        selectedItem.setCity(txtCity.getText());
+        selectedItem.setAge(Integer.parseInt(txtAge.getText()));
+
+        tblCustomeInfo.refresh();
+
+        txtCustID.setText("");
+        txtName.setText("");
+        txtPhoneNumber.setText("");
+        txtCity.setText("");
+        txtAge.setText("");
 
     }
 
