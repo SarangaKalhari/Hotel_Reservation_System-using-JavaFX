@@ -80,6 +80,9 @@ public class Customer_Info implements Initializable {
 
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
+        CustomerInfoDTO selectedItem = tblCustomeInfo.getSelectionModel().getSelectedItem();
+        customerInfoDTOS.remove(selectedItem);
+        tblCustomeInfo.refresh();
 
     }
 
