@@ -148,7 +148,6 @@ public class EmployeeController implements Initializable {
                 txtPhoneNumber.setText(t1.getPhoneNo());
                 txtEmail.setText(t1.getEmail());
                 txtSalary.setText(String.valueOf(t1.getSalary()));
-
             }
         });
     }
