@@ -6,54 +6,55 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
+<AnchorPane prefHeight="600" prefWidth="900" styleClass="root-pane" stylesheets="/css/customer_info.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Customer_Info">
 
-<AnchorPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Customer_Info">
-   <children>
-      <TableView fx:id="tblCustomeInfo" layoutX="40.0" layoutY="169.0" prefHeight="200.0" prefWidth="538.0">
-         <columns>
-            <TableColumn fx:id="colCustID" prefWidth="87.20001220703125" text="ID" />
-            <TableColumn fx:id="colCustName" prefWidth="140.0" text="Name" />
-            <TableColumn fx:id="colCustAge" prefWidth="58.4000244140625" text="Age" />
-            <TableColumn fx:id="colCustPhoneNo" minWidth="0.0" prefWidth="143.20001220703125" text="Phone Number" />
-            <TableColumn fx:id="colCustCity" prefWidth="111.20001220703125" text="City" />
-         </columns>
-      </TableView>
-      <Label layoutX="221.0" layoutY="14.0" prefHeight="42.0" prefWidth="176.0" text="Customer Info">
-         <font>
-            <Font name="System Bold" size="24.0" />
-         </font>
-      </Label>
-      <TextField fx:id="txtCustID" layoutX="40.0" layoutY="55.0" promptText="Customer ID" />
-      <TextField fx:id="txtPhoneNumber" layoutX="123.0" layoutY="91.0" prefHeight="26.0" prefWidth="191.0" promptText="Phone Number" />
-      <TextField fx:id="txtCity" layoutX="353.0" layoutY="91.0" promptText="City" />
-      <TextField fx:id="txtName" layoutX="234.0" layoutY="55.0" prefHeight="26.0" prefWidth="211.0" promptText="Name" />
-      <Button layoutX="82.0" layoutY="130.0" mnemonicParsing="false" onAction="#btnAddOnAction" style="-fx-background-color: #33214a;" text="ADD" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Button>
-      <Button layoutX="185.0" layoutY="129.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="26.0" prefWidth="72.0" style="-fx-background-color: #33214a;" text="Update" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Button>
-      <Button layoutX="325.0" layoutY="127.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="26.0" prefWidth="72.0" style="-fx-background-color: #33214a;" text="Delete" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Button>
-      <Button layoutX="443.0" layoutY="127.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="26.0" prefWidth="53.0" style="-fx-background-color: #33214a;" text="Clear" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Button>
-      <Button layoutX="497.0" layoutY="384.0" mnemonicParsing="false" onAction="#btnReloadOnAction" text="Reload">
-         <font>
-            <Font name="System Bold Italic" size="12.0" />
-         </font>
-      </Button>
-      <TextField fx:id="txtAge" layoutX="470.0" layoutY="55.0" prefHeight="26.0" prefWidth="95.0" promptText="Age" />
-   </children>
+    <children>
+
+        <!-- Card container -->
+        <VBox alignment="TOP_CENTER" layoutX="100.0" layoutY="50.0" prefWidth="700.0" spacing="15" styleClass="customer-card">
+
+            <!-- Title -->
+            <Label styleClass="card-title" text="Customer Information">
+                <font>
+                    <Font name="System Bold" size="26.0" />
+                </font>
+            </Label>
+
+            <!-- Input Fields -->
+            <HBox alignment="CENTER" spacing="10">
+                <TextField fx:id="txtCustID" promptText="Customer ID" styleClass="card-input" />
+                <TextField fx:id="txtName" promptText="Name" styleClass="card-input" />
+                <TextField fx:id="txtAge" promptText="Age" styleClass="card-input" />
+                <TextField fx:id="txtPhoneNumber" promptText="Phone Number" styleClass="card-input" />
+                <TextField fx:id="txtCity" promptText="City" styleClass="card-input" />
+            </HBox>
+
+            <!-- Buttons -->
+            <HBox alignment="CENTER" spacing="15">
+                <Button fx:id="btnAdd" onAction="#btnAddOnAction" styleClass="card-button" text="Add" />
+                <Button fx:id="btnUpdate" onAction="#btnUpdateOnAction" styleClass="card-button" text="Update" />
+                <Button fx:id="btnDelete" onAction="#btnDeleteOnAction" styleClass="card-button" text="Delete" />
+                <Button fx:id="btnClear" onAction="#btnClearOnAction" styleClass="card-button" text="Clear" />
+            </HBox>
+
+            <!-- Table -->
+            <TableView fx:id="tblCustomeInfo" prefHeight="222.0" prefWidth="655.0" styleClass="card-table">
+                <columns>
+                    <TableColumn fx:id="colCustID" prefWidth="100.0" text="ID" />
+                    <TableColumn fx:id="colCustName" prefWidth="150.0" text="Name" />
+                    <TableColumn fx:id="colCustAge" prefWidth="70.0" text="Age" />
+                    <TableColumn fx:id="colCustPhoneNo" prefWidth="180.0" text="Phone Number" />
+                    <TableColumn fx:id="colCustCity" prefWidth="180.0" text="City" />
+                </columns>
+            </TableView>
+
+            <!-- Reload Button -->
+            <Button fx:id="btnReload" onAction="#btnReloadOnAction" styleClass="reload-button" text="Reload" />
+
+        </VBox>
+    </children>
 </AnchorPane>
