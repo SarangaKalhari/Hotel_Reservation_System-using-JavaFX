@@ -5,57 +5,62 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="414.0" prefWidth="468.0"
-            style="-fx-border-radius: 20px; -fx-background-color: #4f5459;"
-            xmlns="http://javafx.com/javafx/24.0.1"
+<AnchorPane xmlns="http://javafx.com/javafx/24.0.1"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="controller.LoginFormController">
+            fx:controller="controller.LoginFormController"
+            prefWidth="800" prefHeight="600"
+            stylesheets="/css/login_form.css"
+            styleClass="root-pane">
 
     <children>
-        <!-- Title -->
-        <Label layoutX="138.0" layoutY="36.0"
-               prefHeight="54.0" prefWidth="191.0"
-               text="Login Form" textFill="#f2eaea">
-            <font>
-                <Font name="System Bold Italic" size="36.0" />
-            </font>
-        </Label>
 
-        <!-- Username field -->
-        <TextField fx:id="txtUserName"
-                   layoutX="113.0" layoutY="141.0"
-                   prefHeight="35.0" prefWidth="242.0"
-                   promptText="User Name"
-                   style="-fx-background-radius: 20px; -fx-padding: 8 12; -fx-background-color: #ffffff;" />
+        <!-- Center container -->
+        <VBox alignment="CENTER" spacing="20"
+              layoutX="225.0" layoutY="100.0"
+              prefWidth="350" prefHeight="400"
+              styleClass="login-card">
 
-        <!-- Password field -->
-        <PasswordField fx:id="txtPassword"
-                       layoutX="113.0" layoutY="207.0"
-                       prefHeight="35.0" prefWidth="242.0"
-                       promptText="Password"
-                       style="-fx-background-radius: 20px; -fx-padding: 8 12; -fx-background-color: #ffffff;" />
+            <!-- Title -->
+            <Label text="Login"
+                   styleClass="title-label">
+                <font>
+                    <Font name="System Bold" size="34.0"/>
+                </font>
+            </Label>
 
-        <!-- Login button -->
-        <Button fx:id="btnLogin"
-                layoutX="189.0" layoutY="285.0"
-                mnemonicParsing="false"
-                onAction="#btnLoginOnAction"
-                prefHeight="34.0" prefWidth="89.0"
-                text="Login"
-                textFill="#383535"
-                style="-fx-background-color: #42f57b; -fx-background-radius: 20px;">
-            <font>
-                <Font name="System Bold" size="18.0" />
-            </font>
-        </Button>
+            <!-- Username -->
+            <TextField fx:id="txtUserName"
+                       promptText="Enter your username"
+                       styleClass="input-field"
+                       prefHeight="40.0" prefWidth="260.0"/>
 
-        <!-- Optional status label -->
-        <Label fx:id="lblStatus"
-               layoutX="150.0" layoutY="340.0"
-               textFill="#ffb3b3"
-               style="-fx-font-size: 13px;" />
+            <!-- Password -->
+            <PasswordField fx:id="txtPassword"
+                           promptText="Enter your password"
+                           styleClass="input-field"
+                           prefHeight="40.0" prefWidth="260.0"/>
+
+            <!-- Login button -->
+            <Button fx:id="btnLogin"
+                    text="LOGIN"
+                    onAction="#btnLoginOnAction"
+                    prefWidth="200" prefHeight="40"
+                    styleClass="login-button"/>
+
+            <!-- Status label -->
+            <Label fx:id="lblStatus"
+                   textFill="#ffb3b3"
+                   styleClass="status-label"
+                   text=""/>
+
+<!--            &lt;!&ndash; Links &ndash;&gt;-->
+<!--            <Label text="Forgot password?" styleClass="link-label"/>-->
+<!--            <Label text="Don’t have an account? Sign up" styleClass="link-label"/>-->
+
+        </VBox>
+
     </children>
-
 </AnchorPane>
