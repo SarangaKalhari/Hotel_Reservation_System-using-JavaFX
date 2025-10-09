@@ -28,6 +28,7 @@ public class DashBoardController {
         try {
             stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/room_info.fxml"))));
             stage.setTitle("Room Info");
+            stage.setResizable(false);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
