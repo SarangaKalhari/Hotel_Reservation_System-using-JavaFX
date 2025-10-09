@@ -1,0 +1,94 @@
+/* ------- Background ------ */
+.root-pane {
+    -fx-background-color: linear-gradient(to right, #71a8f5, #c071f5);
+}
+
+/* ------ Main Card -------- */
+.room-card {
+    -fx-background-color: #92b4d1;
+    -fx-background-radius: 20;
+    -fx-padding: 25 40 25 40;
+    -fx-spacing: 20;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 15, 0, 0, 4);
+}
+
+/* ------- Title --------- */
+.room-title {
+    -fx-text-fill: #222;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
+
+/* ------- TextFields --------- */
+.room-input {
+    -fx-pref-width: 130;
+    -fx-pref-height: 34;
+    -fx-background-color: #f6f6f6;
+    -fx-background-radius: 10;
+    -fx-padding: 5 10;
+    -fx-border-color: transparent;
+    -fx-font-size: 14px;
+}
+
+.room-input:focused {
+    -fx-border-color: #6a11cb;
+    -fx-border-width: 2;
+}
+
+/* ------ Buttons ------ */
+.room-button {
+    -fx-background-color: linear-gradient(to right, #c071f5, #71a8f5);
+    -fx-text-fill: white;
+    -fx-background-radius: 25;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-pref-width: 100;
+    -fx-pref-height: 35;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 8, 0, 0, 2);
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+.room-button:hover {
+    -fx-background-color: linear-gradient(to right, #71a8f5, #c071f5);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* ------ Table ----- */
+.room-table {
+    -fx-background-color: transparent;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+.room-table .column-header-background {
+    -fx-background-color: linear-gradient(to right, #6a11cb, #2575fc);
+    -fx-background-radius: 10 10 0 0;
+}
+
+.room-table .column-header, .room-table .label {
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+
+
+/* ------ Reload Button  --------  */
+.reload-button {
+    -fx-background-color: #b5dce7;           /* light blue background */
+        -fx-text-fill: #2f4f4f;                  /* soft dark text */
+        -fx-font-weight: bold;
+        -fx-font-size: 14px;
+        -fx-background-radius: 40;               /* rounded edges */
+        -fx-border-radius: 40;
+        -fx-pref-width: 120;
+        -fx-pref-height: 38;
+        -fx-border-color: transparent;
+        -fx-cursor: hand;
+        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 5, 0, 0, 2);
+        -fx-padding: 5 15 5 15;
+        -fx-transition: all 0.3s ease-in-out;
+
+}
