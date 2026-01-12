@@ -95,6 +95,13 @@ public class EmployeeController implements Initializable {
         employeeDTOS.remove(selectedItem);
         tblEmpInfo.refresh();
 
+        txtEmpID.setText("");
+        txtEmpName.setText("");
+        txtPhoneNumber.setText("");
+        txtRole.setText("");
+        txtEmail.setText("");
+        txtSalary.setText("");
+
     }
 
     @FXML

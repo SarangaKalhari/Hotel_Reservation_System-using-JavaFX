@@ -42,7 +42,7 @@
             </HBox>
 
             <!-- Table -->
-            <TableView fx:id="tblCustomeInfo" prefHeight="222.0" prefWidth="655.0" styleClass="card-table">
+            <TableView fx:id="tblCustomeInfo" prefHeight="208.0" prefWidth="698.0" styleClass="card-table">
                 <columns>
                     <TableColumn fx:id="colCustID" prefWidth="100.0" text="ID" />
                     <TableColumn fx:id="colCustName" prefWidth="150.0" text="Name" />

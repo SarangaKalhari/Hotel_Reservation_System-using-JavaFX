@@ -90,6 +90,12 @@ public class Customer_Info implements Initializable {
         customerInfoDTOS.remove(selectedItem);
         tblCustomeInfo.refresh();
 
+        txtCustID.setText("");
+        txtName.setText("");
+        txtPhoneNumber.setText("");
+        txtCity.setText("");
+        txtAge.setText("");
+
     }
 
     @FXML
