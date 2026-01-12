@@ -63,6 +63,10 @@ public class Room_Info implements Initializable {
 
     @FXML
     void btnClearOnAction(ActionEvent event) {
+        txtRoomId.clear();
+        txtType.clear();
+        txtDesc.clear();
+        txtPrice.clear();
 
     }
 
@@ -71,6 +75,11 @@ public class Room_Info implements Initializable {
         RoomInfoDTO selectedItem = tblRoomInfo.getSelectionModel().getSelectedItem();
         roomInfoDTOS.remove(selectedItem);
         tblRoomInfo.refresh();
+
+        txtRoomId.clear();
+        txtType.clear();
+        txtDesc.clear();
+        txtPrice.clear();
     }
 
 

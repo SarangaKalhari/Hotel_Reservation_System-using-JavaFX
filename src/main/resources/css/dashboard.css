@@ -1,0 +1,45 @@
+/* ======== Background ======== */
+.root-pane {
+     -fx-background-color: linear-gradient(to right, #71a8f5, #c071f5);
+}
+
+/* ======== Dashboard Card ======== */
+.dashboard-card {
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+    -fx-padding: 40 50 40 50;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 15, 0, 0, 4);
+}
+
+/* ======== Title ======== */
+.dashboard-title {
+    -fx-text-fill: #222;
+    -fx-font-weight: bold;
+    -fx-font-size: 34px;
+}
+
+/* ======== Buttons ======== */
+.dashboard-button {
+    -fx-background-color: linear-gradient(to right, #c071f5, #71a8f5);
+    -fx-text-fill: white;
+    -fx-background-radius: 25;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-pref-width: 250;
+    -fx-pref-height: 45;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 3);
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+.dashboard-button:hover {
+    -fx-background-color: linear-gradient(to right, #71a8f5, #c071f5);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* Optional subtle animation */
+.dashboard-card:hover {
+    -fx-translate-y: -5;
+    -fx-transition: 0.3s;
+}

@@ -13,7 +13,14 @@ public class DashBoardController {
 
     @FXML
     void btnCustomerOnAction(ActionEvent event) {
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/customer_info.fxml"))));
+            stage.setTitle("Customer Info");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
+        stage.show();
     }
 
     @FXML
@@ -21,10 +28,21 @@ public class DashBoardController {
         try {
             stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/room_info.fxml"))));
             stage.setTitle("Room Info");
+            stage.setResizable(false);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
         stage.show();
     }
 
+    public void btnEmployeeOnAction(ActionEvent actionEvent) {
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/employee_info.fxml"))));
+            stage.setTitle("Employee Info");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        stage.show();
+    }
 }

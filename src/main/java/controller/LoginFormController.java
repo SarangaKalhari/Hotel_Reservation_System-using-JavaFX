@@ -14,6 +14,7 @@ import java.io.IOException;
 public class LoginFormController {
 
     Stage stage = new Stage();
+
     public String[] userName = {"Admin", "Saman", "kamal"};
     public String[] password = {"1234", "0000", "1111"};
 
@@ -42,7 +43,7 @@ public class LoginFormController {
                 break;
             }
 
-            }
+        }
         if(loginSuccess) {
             System.out.println("Login Failed");
 
@@ -55,7 +56,7 @@ public class LoginFormController {
             txtUserName.clear();
             txtPassword.clear();
 
-    ;    }
+        }
         }
 
 
